@@ -3,8 +3,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-
+#include <QtCharts/QChartView>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QPieSlice>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,6 +23,8 @@ public:
 private slots:
 
     void on_toolButton_clicked();
+    void openfile();
+    void openCsvFile(const QString &filePath);
 
 private:
     Ui::MainWindow *ui;
